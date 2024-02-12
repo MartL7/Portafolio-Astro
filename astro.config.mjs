@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({
-    outputPath: './dist/_astro'
-  })]
+  integrations: [tailwind()],
+  site: "https://martl7.github.io/Port-Folio-Astro/",
+  base: "/Port-Folio-Astro/",
 });

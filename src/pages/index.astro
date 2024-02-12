@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import Projects from '../components/Projects.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Country from '../components/Country.astro'
+import SocialNetworks from '../components/SocialNetworks.astro'
+import Technologies from '../components/Technologies.astro'
+import Dedication from '../components/Dedication.astro'
+import Presentation from '../components/Presentation.astro'
+import Scene from '../components/SceneImg.astro'
+---
+
+<Layout title="PortFolio of Work - Geovany Rincon.">
+	<main>
+		<!-- Bento Grid  -->
+		<SectionContainer class="grid grid-cols-2 md:grid-cols-3 md:w-[820px] gap-4">
+			
+			<Presentation />
+
+			<SectionContainer class="border shadow-border-custom rounded-lg flex flex-col justify-center items-center h-full">
+				<Dedication />
+			</SectionContainer>
+
+			<SectionContainer class="border shadow-border-custom rounded-lg h-28 flex flex-col justify-center items-center flex-wrap col-start-1 col-end-3 row-start-4 row-end-5 md:h-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3">
+				<Technologies />
+			</SectionContainer>
+
+			<Scene />
+
+			<SectionContainer class="border shadow-border-custom rounded-lg flex flex-col justify-center items-center col-start-1 col-end-3 md:col-start-1 md:col-end-2">
+				<SocialNetworks />
+			</SectionContainer>
+
+			<SectionContainer class="border shadow-border-custom rounded-lg h-24 flex justify-center items-center gap-x-5 col-start-1 col-end-3 md:col-start-2 md:col-end-3 md:h-auto">
+				<Country />
+			</SectionContainer>
+
+		</SectionContainer>
+
+		<!-- Projects -->
+		<SectionContainer class="my-6">
+			<Projects />
+		</SectionContainer>
+
+		<!-- Coming Soon more projects ❌ -->
+	</main>
+</Layout>

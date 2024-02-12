@@ -1,0 +1,112 @@
+---
+// Code by: Midudev (https://midu.dev/)
+import GithubIcon from "./icons/Github.astro"
+import ReactIcon from "./icons/React.astro"
+import JavascriptIcon from "./icons/Javascript.astro"
+import SqlIcon from "./icons/Sql.astro"
+import Link from "./Link.astro"
+import NodeIcon from "./icons/Node.astro"
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-400 text-black",
+    icon: JavascriptIcon,
+  },
+  
+  SQL: {
+    name: "SQL",
+    class: "bg-blue-500 text-white",
+    icon: SqlIcon,
+  },
+
+  NODE: {
+    name: "Node.js",
+    class: "bg-green-500 text-white",
+    icon: NodeIcon,
+  },
+}
+
+const projects = [
+  {
+    title: "Fichas Cbtis 86",
+    description:
+      "Aplicación web para que el alumno pueda sacar su ficha de inscripción. Creada con vanilla JavaScript, HTML, CSS, MySQL y PHP.",
+    link: "https://cbtis86.edu.mx/cbtis86.edu.mx/admision/Fichas_CBTis86/",
+    image: "/img-projects/fichas1.jpg",
+    tags: [TAGS.JAVASCRIPT, TAGS.SQL],
+  },
+
+  {
+    title: "Recomendaciones de Contenido de Streaming",
+    description:
+      "Aplicación web que permite al usuario recomendar alguna película, serie, anime, etc. Creada con React, Bootstrap, NodeJS, Express, MySQL",
+    link: "https://martl7.github.io/Recomendaciones-Streaming/",
+    github: "https://github.com/MartL7/Recomendaciones-Streaming",
+    image: "/img-projects/streaming1.jpg",
+    tags: [TAGS.REACT, TAGS.SQL, TAGS.NODE],
+  },
+]
+---
+<h2 class="text-white shadow-text-purple font-bold text-3xl my-3"> Projects </h2>
+<div class="flex flex-col gap-y-16">
+  {
+    projects.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-3 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="transition duration-500 ease-out hover:translate-y-1">
+            <img
+                src={image}
+                alt={title}
+                class="w-full h-64 object-cover rounded-lg"
+            />
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                    <li>
+                    <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                    </span>
+                    </li>
+                ))}
+                </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                    <Link href={github}>
+                    <GithubIcon class="size-6" />
+                    Code
+                    
+                    </Link>
+                )}
+                {link && (
+                    <Link href={link}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    Preview
+                    </Link>
+                )}
+                </footer>
+            </div>
+        </div>
+    </article>
+        ))
+    }
+    </div>

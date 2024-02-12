@@ -1,0 +1,25 @@
+---
+import SocialwPill from './SocialwPill.astro'
+import GithubIcon from './icons/Github.astro'
+import LinkedinIcon from './icons/Linkedin.astro'
+---
+<div class="border shadow-border-custom rounded-lg col-start-1 col-end-3 h-auto md:h-auto">
+    <h1 class="text-white shadow-text-purple font-bold text-3xl my-2 md:my-3 px-4"> Geovany Rincon </h1>
+    <p class="text-white shadow-text-custom font-bold text-xl px-5 my-2 md:my-4"> Hi, I'm a 17-year-old young man who really enjoys everything related to programming, especially web development. I'm ready to face new challenges and learn from them. </p>
+
+    <ul class="flex justify-end items-end gap-x-3">
+        <SocialwPill href="https://github.com/MartL7/">
+            <GithubIcon class="w-6 h-6"/>
+            GitHub
+        </SocialwPill>
+
+        <SocialwPill href="https://linkedin.com/">
+            <LinkedinIcon class="w-6 h-6" />
+            LinkedIn
+        </SocialwPill>
+    </ul>
+</div>
+
+<figure class="border shadow-border-custom rounded-lg col-start-1 col-end-2 row-start-2 row-end-3 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2">
+    <img class="rounded-lg w-full h-full" src="https://avatars.githubusercontent.com/u/106359853?v=4">
+</figure>

@@ -7,11 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "pnpm run build && gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.3.0",
     "astro": "^4.3.5",
     "tailwindcss": "^3.4.1"
   },

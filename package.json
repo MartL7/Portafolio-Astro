@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "pnpm run build && gh-pages -d dist",
+    "deploy": "pnpm run build && gh-pages -d dist -r https://github.com/MartL7/Port-Folio-Astro/",
     "astro": "astro"
   },
   "dependencies": {

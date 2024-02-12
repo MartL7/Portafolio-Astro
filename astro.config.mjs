@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https:/martl7.github.io",
-  base: "/Port-Folio-Astro/",
+  base: "/Port-Folio-Astro/"
 });

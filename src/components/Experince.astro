@@ -1,0 +1,33 @@
+---
+// Creidts ->  Midudev (https://midu.dev)
+import ExperienceItem from "./ExperinceItem.astro"
+
+const EXPERIENCIE = [
+  {
+    date: "Diciembre 2023",
+    title: "Principal FullStack Engineer",
+    company: "CBTis 86",
+    description:
+      "Desarrollo de aplicaciones web para la gestión de recursos y alumnos. Implementación de metodologías ágiles y buenas prácticas de desarrollo.",
+  },
+  {
+    date: "Actualmente...",
+    title: "En constante aprendizaje",
+    company: "GeoDev",
+    description:
+      "Trato de aprender algo nuevo cada día y compartirlo en grupos de programación. Listo para nuevas oportunidades laborales y cualquier tecnología nueva por aprender. Comparto pequeños proyectos en mi canal de TikTok.",
+    link: "https://tiktok.com/@geovasbb",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  <h2 class="text-white shadow-text-purple font-bold text-3xl my-3 px-5 md:px-0"> -> Experience </h2>
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

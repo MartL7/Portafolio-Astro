@@ -1,0 +1,33 @@
+<header class="fixed top-0 z-10 flex justify-between items-center w-full px-4 rounded-3xl font-bold md:hidden">
+    <img src="https://avatars.githubusercontent.com/u/106359853?v=4" class="size-7 rounded-full">
+
+    <nav class="flex gap-5 justify-center">
+        <a href="#top"> Home </a>
+        <a href="#experience"> Experience </a>
+        <a href="#projects"> Projects </a>
+        <a href="#aboutme"> Sobre mí </a>
+    </nav>
+</header>
+
+<style>
+    header {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+  
+    @keyframes nav-shadown {
+      to {
+        @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10 text-gray-700 mt-3 h-10;
+      }
+    }
+
+    @media (max-width: 380px) {
+      header {
+        justify-content: center;
+      }
+      header img {
+        display: none;
+      }
+    }
+</style>

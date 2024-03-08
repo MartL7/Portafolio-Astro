@@ -1,6 +1,7 @@
 ---
 // Creidts ->  Midudev (https://midu.dev)
 import ExperienceItem from "./ExperinceItem.astro"
+import CodeIcon from "./icons/Code.astro"
 
 const EXPERIENCIE = [
   {
@@ -21,11 +22,15 @@ const EXPERIENCIE = [
 ]
 ---
 
-<ol class="relative mt-16">
-  <h2 class="text-white shadow-text-purple font-bold text-3xl my-3 px-5 md:px-0"> -> Experience </h2>
+<ol class="relative my-10 md:my-20">
+  <h2 class="flex items-center gap-x-4 text-white shadow-text-purple font-bold text-3xl px-2 md:px-0">
+    <CodeIcon class="size-7" /> 
+     Experience 
+  </h2>
+
   {
     EXPERIENCIE.map((experiencie) => (
-      <li class="">
+      <li class="mt-10 md:mt-14">
         <ExperienceItem {...experiencie} />
       </li>
     ))

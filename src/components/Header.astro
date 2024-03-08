@@ -5,7 +5,7 @@
         <a href="#top"> Home </a>
         <a href="#experience"> Experience </a>
         <a href="#projects"> Projects </a>
-        <a href="#aboutme"> Sobre mí </a>
+        <a href="#aboutme"> About me </a>
     </nav>
 </header>
 
@@ -15,6 +15,11 @@
       animation-timeline: scroll();
       animation-range: 0 100px;
     }
+
+    a:hover {
+      color: rgb(213, 213, 65);
+      transition: all 0.3s ease-in;
+    }
   
     @keyframes nav-shadown {
       to {
@@ -22,7 +27,7 @@
       }
     }
 
-    @media (max-width: 380px) {
+    @media (max-width: 400px) {
       header {
         justify-content: center;
       }

@@ -6,8 +6,9 @@ import JavascriptIcon from "./icons/Javascript.astro"
 import SqlIcon from "./icons/Sql.astro"
 import Link from "./Link.astro"
 import NodeIcon from "./icons/Node.astro"
+import CodeIcon from "./icons/Code.astro"
 
-const TAGS = {
+export const TAGS = {
   REACT: {
     name: "React.js",
     class: "bg-black text-white",
@@ -52,9 +53,22 @@ const projects = [
     image: "./img-projects/streaming1.jpg",
     tags: [TAGS.REACT, TAGS.SQL, TAGS.NODE],
   },
+
+  {
+    title: "Tablas de estadística",
+    description: "Página web que ayuda a estudiantes a crear tablas de distribución de frecuencias de estadística. Creada con react, tailwindcss",
+    link: "https://estadistica-tablas.vercel.app/",
+    github: "https://github.com/MartL7/Tablas-Estadistica",
+    image: "/img-projects/estadisticas.webp",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT],
+  }
 ]
 ---
-<h2 class="text-white shadow-text-purple font-bold text-3xl my-3 px-5 md:px-0"> -> Projects </h2>
+<h2 class="flex gap-x-4 items-center mb-8 text-white shadow-text-purple font-bold text-3xl px-5 md:px-0">
+   <CodeIcon class="size-7"/> 
+   Projects 
+</h2>
+
 <div class="flex flex-col gap-y-16">
   {
     projects.map(({ image, title, description, tags, link, github }) => (

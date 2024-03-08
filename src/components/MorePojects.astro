@@ -1,0 +1,72 @@
+---
+import { TAGS } from './Projects.astro'
+import CodeIcon from './icons/Code.astro'
+import GithubIcon from "./icons/Github.astro"
+import Link from "./Link.astro"
+
+const MORE_PROJECTS = [
+    {
+        title: "Pokedex",
+        tags: [TAGS.REACT, TAGS.JAVASCRIPT],
+        github: "https://github.com/MartL7/Pokedex-React",
+        link: "https://martl7.github.io/Pokedex-React/"
+    },
+    {
+        title: "Calculadora de Ships",
+        tags: [TAGS.REACT, TAGS.JAVASCRIPT],
+        github: "https://github.com/MartL7/Ships-React",
+        link: "https://martl7.github.io/Ships-React/"
+    }
+]
+---
+
+<h2 class="flex gap-x-4 items-center mb-8 text-white shadow-text-purple font-bold text-3xl px-5 md:px-0">
+    <CodeIcon clas="size-7"/>
+    More Projects
+</h2>
+
+<div class="flex gap-10 flex-row flex-wrap justify-center items-center">
+    {
+        MORE_PROJECTS.map(({ title, tags, github, link }) => (
+            <article class="border border-gray-100 rounded-xl p-10 transition hover:scale-105">
+                <div class="w-full">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                    {title}
+                    </h3>
+                    <div class="flex flex-col flex-wrap mt-2">
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {tags.map((tag) => (
+                                <li>
+                                <span
+                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                >
+                                    <tag.icon class="size-4" />
+                                    {tag.name}
+                                </span>
+                                </li>
+                            ))}
+                            </ul>
+                        <footer class="flex items-start justify-start mt-4 gap-x-4">
+                            {github && (
+                                <Link href={github}>
+                                <GithubIcon class="size-6" />
+                                Code
+                                
+                                </Link>
+                            )}
+                            {link && (
+                                <Link href={link}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                Preview
+                                </Link>
+                            )}
+                            </footer>
+                    </div>
+                </div>
+            </article>
+        ))
+    }
+</div>

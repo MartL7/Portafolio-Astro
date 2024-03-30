@@ -5,16 +5,18 @@ import InstagramIcon from './icons/Instagram.astro'
 import TwitterIcon from './icons/Twitter.astro'
 ---
 <h2 class="text-white shadow-text-custom font-bold text-2xl my-3"> Social Networks </h2>
-    <ul class="flex flex-row gap-x-2">
-        <SocialwPill href="https://wa.me/527761029302">
-            <WhatsappIcon class="w-8 h-8" />
-        </SocialwPill>
-        
-        <SocialwPill href="https://www.instagram.com/geovx_lg/">
-            <InstagramIcon class="w-8 h-8" />
-        </SocialwPill>
-
-        <SocialwPill href="https://twitter.com/GeovasYoSoy">
-            <TwitterIcon class="w-8 h-8" />
-        </SocialwPill>
+    <ul>
+        <div class="flex gap-x-5">
+            <SocialwPill href="https://wa.me/527761029302">
+                <WhatsappIcon class="size-8 text-yellow-100/50" />
+            </SocialwPill>
+            
+            <SocialwPill href="https://www.instagram.com/geovx_lg/">
+                <InstagramIcon class="size-8 text-yellow-100/50" />
+            </SocialwPill>
+    
+            <SocialwPill href="https://twitter.com/GeovasYoSoy">
+                <TwitterIcon class="size-8 text-yellow-100/50" />
+            </SocialwPill>
+        </div>
 </ul>

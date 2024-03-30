@@ -11,12 +11,13 @@ import Presentation from '../components/Presentation.astro'
 import Scene from '../components/SceneImg.astro'
 import Experince from '../components/Experince.astro'
 import MoreProjects from '../components/MorePojects.astro'
+import AboutMe from '../components/AboutMe.astro'
 ---
 
 <Layout title="PortFolio of Work - Geovany Rincon.">
 	<main class="md:max-w-[820px] mt-9 animate-fade-in md:mt-4">
 		<!-- Bento Grid  -->
-		<SectionContainer class="grid grid-cols-2 md:grid-cols-3 md:w-full gap-4 pb-11 md:mt-10">
+		<SectionContainer class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 md:w-full gap-4 pb-11 md:mt-10">
 			
 			<Presentation />
 
@@ -24,17 +25,17 @@ import MoreProjects from '../components/MorePojects.astro'
 				<Dedication />
 			</SectionContainer>
 
-			<SectionContainer class="border shadow-border-custom rounded-lg h-28 flex flex-col justify-center items-center flex-wrap col-start-1 col-end-3 row-start-4 row-end-5 md:h-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3">
+			<SectionContainer class="border shadow-border-custom rounded-lg h-28 flex flex-col justify-center items-center flex-wrap col-start-1 col-end-3 row-start-4 row-end-5 md:h-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4 sm:h-auto">
 				<Technologies />
 			</SectionContainer>
 
 			<Scene />
 
-			<SectionContainer class="border shadow-border-custom rounded-lg flex flex-col justify-center items-center col-start-1 col-end-3 md:col-start-1 md:col-end-2">
+			<SectionContainer class="border shadow-border-custom rounded-lg h-28 md:h-auto flex flex-col justify-center items-center col-start-1 col-end-3 md:col-start-1 md:col-end-2 sm:col-start-2 sm:col-end-3 sm:h-full">
 				<SocialNetworks />
 			</SectionContainer>
 
-			<SectionContainer class="border shadow-border-custom rounded-lg h-24 flex justify-center items-center gap-x-5 col-start-1 col-end-3 md:col-start-2 md:col-end-3 md:h-auto">
+			<SectionContainer class="border shadow-border-custom rounded-lg h-24 flex justify-center items-center gap-x-5 col-start-1 col-end-3 md:col-start-2 md:col-end-3 md:h-auto sm:col-start-1 sm:col-end-4">
 				<Country />
 			</SectionContainer>
 
@@ -56,5 +57,6 @@ import MoreProjects from '../components/MorePojects.astro'
 		</SectionContainer>
 
 		<!-- Agg about me ❌ -->
+		<AboutMe />	
 	</main>
 </Layout>
